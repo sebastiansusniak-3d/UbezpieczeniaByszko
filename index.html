@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Porady ubezpieczeniowe od Iwony Buszko-Byszewskiej. Aktualne trendy i wskazówki Uniqa.">
+    <title>Blog | Iwona Buszko-Byszewska | Uniqa Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Style dla nagłówka: Logo na górze, czarne dane pod spodem */
+        .navbar .logo {
+            display: flex;
+            flex-direction: column; /* Układ pionowy */
+            align-items: center; /* Wyśrodkowanie */
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .header-logo {
+            height: 90px; /* Powiększone logo */
+            width: auto;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .navbar .logo h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            font-weight: 700;
+            color: #333333; /* CZARNY kolor tekstu */
+        }
+
+        .navbar .logo h1 span {
+            display: block;
+            font-weight: 400;
+            font-size: 0.9em;
+            color: #555555; /* Lekko jaśniejszy szary dla podtytułu */
+            margin-top: 4px;
+        }
+
+        /* Dostosowanie dla urządzeń mobilnych */
+        @media (max-width: 768px) {
+            .header-logo {
+                height: 70px;
+            }
+            .navbar .logo h1 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Dodatkowe style specyficzne dla bloga (jeśli nie masz ich w style.css) */
+        .blog-categories {
+            padding: 40px 20px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .category-btn {
+            padding: 10px 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .category-btn:hover, .category-btn.active {
+            background: #005eb8; /* Kolor Uniqa */
+            color: #fff;
+            border-color: #005eb8;
+        }
+        .blog-posts {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .blog-post {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .blog-post.featured {
+            border-left: 5px solid #005eb8;
+            background: #f0f7ff;
+        }
+        .post-meta {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+        .post-meta .category {
+            color: #005eb8;
+            font-weight: bold;
+        }
+        .blog-post h2 {
+            margin: 10px 0;
+            color: #222;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #005eb8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f4f4f4;
+        }
+        .cta-section a {
+            color: #005eb8;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- 1. NA GÓRZE: POWIĘKSZONE LOGO -->
+                <img src="logo-uniqa.png" alt="Logo Uniqa" class="header-logo" onerror="this.src='logo-uniqa.jpg'; this.onerror=null;">
+                
+                <!-- 2. POD LOGO: DANE (Czarne litery, bez słowa UNIQA w tekście) -->
+                <h1>
+                    Iwona Buszko-Byszewska
+                    <span>Agent Ubezpieczeniowy</span>
+                </h1>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="o-mnie.html">O mnie</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main class="main">  
+        <section class="page-hero">  
+            <div class="hero-content">  
+                <h1>Porady ubezpieczeniowe</h1>  
+                <p>Aktualne trendy i praktyczne wskazówki od Iwony Buszko-Byszewskiej</p>  
+            </div>  
+        </section>  
+
+        <section class="blog-categories">  
+            <h2>Kategorie</h2>  
+            <div class="categories">  
+                <a href="#oc-ac" class="category-btn active">OC/AC Auto</a>  
+                <a href="#dom" class="category-btn">Dom/Mieszkanie</a>  
+                <a href="#zycie" class="category-btn">Życie/Zdrowie</a>  
+                <a href="#porady" class="category-btn">Porady ogólne</a>  
+            </div>  
+        </section>  
+
+        <section class="blog-posts">  
+            <article class="blog-post featured">  
+                <div class="post-meta">  
+                    <span class="date">6 marca 2026</span>  
+                    <span class="category">OC/AC Auto</span>  
+                </div>  
+                <h2>Jak obniżyć OC w 2026? 7 sprawdzonych sposobów</h2>  
+                <p>Dowiedz się jak zaoszczędzić nawet 30% na ubezpieczeniu komunikacyjnym dzięki telematyce, zniżkom bezszkodowym i pakietom rodzinnym...</p>  
+                <a href="#" class="read-more">Czytaj więcej →</a>  
+            </article>  
+
+            <article class="blog-post">  
+                <div class="post-meta">  
+                    <span class="date">28 lutego 2026</span>  
+                    <span class="category">Dom/Mieszkanie</span>  
+                </div>  
+                <h2>Nowe ryzyka w ubezpieczeniach nieruchomości 2026</h2>  
+                <p>Cyberataki na inteligentne domy, powodzie i zmiany klimatu – jak chronić majątek w nowej rzeczywistości...</p>  
+                <a href="#" class="read-more">Czytaj więcej →</a>  
+            </article>  
+
+            <article class="blog-post">  
+                <div class="post-meta">  
+                    <span class="date">15 lutego 2026</span>  
+                    <span class="category">Życie/Zdrowie</span>  
+                </div>  
+                <h2>Ubezpieczenie na życie w erze AI – co się zmienia?</h2>  
+                <p>Jak sztuczna inteligencja wpływa na kalkulacje ryzyka i składki w polisach na życie...</p>  
+                <a href="#" class="read-more">Czytaj więcej →</a>  
+            </article>  
+        </section>  
+
+        <section class="cta-section">  
+            <h2>Masz pytanie do artykułu?</h2>  
+            <p>Zadzwoń do mnie bezpośrednio: <a href="tel:+48534374065">534 374 065</a></p>  
+            <a href="kontakt.html" class="cta-button large">Umów konsultację</a>  
+        </section>  
+    </main>  
+
+    <footer class="footer"><!-- jak w index.html --></footer>  
+    <script src="script.js"></script>
+</body>
+</html>

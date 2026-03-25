@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureLife Insurance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .service {
+      background: white;
+      flex: 1 1 calc(33% - 20px);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .service h3 {
+      color: #004080;
+    }
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background-color: #0066cc;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SecureLife Insurance</h1>
+    <p>Twoje bezpieczeństwo, nasza odpowiedzialność</p>
+  </header>
+  <nav>
+    <a href="#services">Usługi</a>
+    <a href="#about">O nas</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+  <section class="hero">
+    <h1>Ubezpieczenia na każdą sytuację</h1>
+  </section>
+  <div class="container">
+    <section id="services">
+      <h2>Nasze Usługi</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Ubezpieczenie zdrowotne</h3>
+          <p>Zapewnij sobie i swojej rodzinie dostęp do najlepszej opieki medycznej.</p>
+        </div>
+        <div class="service">
+          <h3>Ubezpieczenie samochodu</h3>
+          <p>Pełna ochrona Twojego pojazdu w każdej sytuacji.</p>
+        </div>
+        <div class="service">
+          <h3>Ubezpieczenie domu</h3>
+          <p>Chroń swój dom i majątek przed niespodziewanymi zdarzeniami.</p>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2>O nas</h2>
+      <p>SecureLife Insurance działa od ponad 20 lat, oferując kompleksowe rozwiązania ubezpieczeniowe. Naszym celem jest zapewnienie Ci spokoju i bezpieczeństwa w każdej sytuacji.</p>
+    </section>
+    <section id="contact">
+      <h2>Skontaktuj się z nami</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Imię i nazwisko" required>
+        <input type="email" id="email" placeholder="Adres e-mail" required>
+        <textarea id="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+      </form>
+    </section>
+    <div class="cta">
+      <button onclick="alert('Dziękujemy za zainteresowanie! Skontaktujemy się z Tobą wkrótce.')">Uzyskaj ofertę</button>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2026 SecureLife Insurance. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

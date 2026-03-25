@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iwona Buszko-Byszewska - Agent Ubezpieczeniowy Uniqa z 10-letnim doświadczeniem. Poznaj moją historię i certyfikaty.">
+    <title>O mnie | Iwona Buszko-Byszewska | Uniqa Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- STYLE NAGŁÓWKA (Logo + Dane) --- */
+        .navbar .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .header-logo {
+            height: 90px;
+            width: auto;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .navbar .logo h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            font-weight: 700;
+            color: #333333; /* Czarny kolor tekstu */
+        }
+
+        .navbar .logo h1 span {
+            display: block;
+            font-weight: 400;
+            font-size: 0.9em;
+            color: #555555;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .header-logo { height: 70px; }
+            .navbar .logo h1 { font-size: 1.1rem; }
+        }
+
+        /* --- STYLE DLA STRONY O MNIE --- */
+        
+        /* Hero Section */
+        .page-hero {
+            background: #f4f6f9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            color: #005eb8;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .page-hero h2 {
+            color: #555;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .page-hero p {
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        /* Timeline (Oś czasu) */
+        .about-timeline {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about-timeline h2, .certificates h2, .why-me h2, .cta-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .timeline {
+            position: relative;
+            border-left: 3px solid #005eb8;
+            margin-left: 20px;
+            padding-left: 30px;
+        }
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px; /* Dostosowanie do grubości linii */
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border: 3px solid #005eb8;
+            border-radius: 50%;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: #005eb8;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .timeline-content h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .timeline-content p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Certificates (Certyfikaty) */
+        .certificates {
+            padding: 60px 20px;
+            background: #f9f9f9;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .cert-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .cert-item:hover {
+            transform: translateY(-5px);
+        }
+        .cert-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        .cert-icon.uniqa { background: #005eb8; }
+        .cert-icon.knf { background: #e30613; } /* Przykładowy kolor */
+        .cert-icon.piu { background: #333; }
+        
+        .cert-item h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .cert-item p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Why Me (Dlaczego ja) */
+        .why-me {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            font-size: 1.1rem;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+        }
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+        .benefits-list li strong {
+            color: #005eb8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #eef4fa;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #005eb8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #004494;
+        }
+        .cta-button.large {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer placeholder styles */
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .agent-info a { color: #fff; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <!-- 1. NA GÓRZE: POWIĘKSZONE LOGO -->
+                <img src="logo-uniqa.png" alt="Logo Uniqa" class="header-logo" onerror="this.src='logo-uniqa.jpg'; this.onerror=null;">
+                
+                <!-- 2. POD LOGO: DANE (Czarne litery, bez słowa UNIQA w tekście) -->
+                <h1>
+                    Iwona Buszko-Byszewska
+                    <span>Agent Ubezpieczeniowy</span>
+                </h1>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="o-mnie.html">O mnie</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main class="main">  
+        <section class="page-hero">  
+            <div class="hero-content">  
+                <h1>Iwona Buszko-Byszewska</h1>  
+                <h2>Agent Ubezpieczeniowy Uniqa</h2>  
+                <p><strong>Doświadczenie od 2016 roku</strong> | NIP: 8211500264</p>  
+            </div>  
+        </section>  
+
+        <section class="about-timeline">  
+            <h2>Moja ścieżka zawodowa</h2>  
+            <div class="timeline">  
+                <div class="timeline-item">  
+                    <div class="timeline-year">2016</div>  
+                    <div class="timeline-content">  
+                        <h3>Start działalności</h3>  
+                        <p>Rozpoczęcie działalności agencyjnej w branży ubezpieczeniowej</p>  
+                    </div>  
+                </div>  
+                <div class="timeline-item">  
+                    <div class="timeline-year">2018</div>  
+                    <div class="timeline-content">  
+                        <h3>Certyfikat Uniqa</h3>  
+                        <p>Oficjalne pełnomocnictwo agenta Uniqa Polska</p>  
+                    </div>  
+                </div>  
+                <div class="timeline-item">  
+                    <div class="timeline-year">2026</div>  
+                    <div class="timeline-content">  
+                        <h3>10 lat doświadczenia</h3>  
+                        <p>Ponad 1000 zadowolonych klientów w regionie mazowieckim</p>  
+                    </div>  
+                </div>  
+            </div>  
+        </section>  
+
+        <section class="certificates">  
+            <h2>Certyfikaty i uprawnienia</h2>  
+            <div class="cert-grid">  
+                <div class="cert-item">  
+                    <div class="cert-icon uniqa">U</div>  
+                    <h3>Uniqa Polska</h3>  
+                    <p>Pełnomocnik agenta ubezpieczeniowego</p>  
+                </div>  
+                <div class="cert-item">  
+                    <div class="cert-icon knf">K</div>  
+                    <h3>KNF</h3>  
+                    <p>Zarejestrowany agent ubezpieczeniowy</p>  
+                </div>  
+                <div class="cert-item">  
+                    <div class="cert-icon piu">P</div>  
+                    <h3>PIU</h3>  
+                    <p>Członek Polskiej Izby Ubezpieczeń</p>  
+                </div>  
+            </div>  
+        </section>  
+
+        <section class="why-me">  
+            <h2>Dlaczego warto wybrać mnie?</h2>  
+            <ul class="benefits-list">  
+                <li>✅ <strong>10 lat doświadczenia</strong> w branży ubezpieczeniowej</li>  
+                <li>✅ <strong>Indywidualne podejście</strong> do każdego klienta</li>  
+                <li>✅ <strong>Konkurencyjne stawki</strong> Uniqa + rabaty lojalnościowe</li>  
+                <li>✅ <strong>Obsługa 24/7</strong> w nagłych przypadkach</li>  
+                <li>✅ <strong>Gwarancja najlepszej oferty</strong> lub zwracam czas</li>  
+            </ul>  
+        </section>  
+
+        <section class="cta-section">  
+            <h2>Gotowy na współpracę?</h2>  
+            <a href="tel:+48534374065" class="cta-button large">Zadzwoń 534 374 065</a>  
+        </section>  
+    </main>  
+
+    <footer class="footer"><!-- jak w index.html --></footer>  
+    <script src="script.js"></script>
+</body>
+</html>
